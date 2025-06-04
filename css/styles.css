@@ -1,0 +1,97 @@
+/* global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* end global styles */
+
+
+/*start logo */
+.H1-font {
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 50px;
+}
+.inputs-container{
+    
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+   
+}
+.heading-logo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: height 0.35s;
+    z-index: -1;
+}
+
+.heading-logo:hover::before {
+    height: 50%;
+}
+
+/* end logo */
+
+
+/* start form */
+.label-font {
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 600;
+}
+
+form div {
+    width: 85%;
+    margin: auto;
+}
+
+.form-header h2{
+     font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.form-control:focus {
+    border-color: rgba(255, 193, 7, 1) !important;
+    box-shadow: 0 0 0 .25rem rgba(255, 193, 7, 0.397) !important
+}
+
+#submitBtn{
+width: 150px;
+padding: 8px 0;
+}
+/* end form */
+
+
+/* modal */
+.modal-title div:nth-child(1) {
+   
+    background-color: #f15f5d;
+}
+
+.modal-title div:nth-child(2) {
+  
+    background-color: #febe2e;
+}
+
+.modal-title div:nth-child(3) {
+   
+      background-color: #4db748;
+}
+
+.modal-title div {
+    width: 25px;
+    height: 25px;
+  
+}
+
+.modal-header{
+    border-bottom: none!important;
+}

@@ -1,0 +1,125 @@
+<!-- label , "PT Sans Caption" ,sans-serif -->
+
+<!-- bodybg-color   #f7ecde -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+		rel="stylesheet">
+	<!-- end google fonts -->
+
+	<!-- css styles -->
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- font awosome -->
+	<link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body style="background-color: 	#f7ecde;">
+	<div class="conatiner d-flex flex-column ">
+		<!-- start logo -->
+		<div id="logo" class="d-flex justify-content-center align-content-center p-3 my-4 container">
+			<h1 id="logo-site" class="H1-font heading-logo position-relative ">Bookmarker</h1>
+		</div>
+		<!--  end logo -->
+
+		<!-- start inputs -->
+		<div class="inputs-container container">
+			
+			<form action="">
+				<div class="form-header d-flex align-items-center justify-content-center p-2 ">
+					<h2 class="mt-3"><i class="fa-solid fa-bookmark mx-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark mx-2"></i></h2>
+				</div>
+				<div class="my-4">
+					<label for="siteName" class="form-label label-font  "><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+					<input type="text" class="form-control" id="siteName" placeholder="Bookmark Name" >
+				</div>
+				<div class="mb-3">
+					<label for="siteURL" class="form-label label-font  "><i class="fa-solid fa-link"></i> Site URL</label>
+					<input type="url" class="form-control" id="siteURL" placeholder="Website URL">
+				</div>
+
+				<!--  -->
+        <!-- data-bs-toggle="modal" data-bs-target="#exampleModal"  -->
+				<div class="d-flex justify-content-center align-content-center">
+					<button onclick=" handleAddBookMark()" id="submitBtn" class="btn btn-danger submitBtn my-3" type="button">Submit</button>
+				</div>
+			</form>
+		</div>
+
+ <!-- start table -->
+    <table class="table mt-4 text-center bg-light w-75 mx-auto align-middle">
+          <thead>
+            <tr>
+						<th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr></thead>
+          
+						<tbody id="tableContent">
+              <!-- <tr>
+                <td>1</td>
+                <td>Mmmmm</td>              
+                <td>
+                  <button class="btn btn-visit btn-warning" data-index="0">
+                    <i class="fa-solid fa-eye pe-2"></i><a class="text-decoration-none text-black" href="https://www.facebook.com/" target="_blank">Visit</a>
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-delete btn-danger pe-2" data-index="0">
+                    <i class="fa-solid fa-trash-can"></i>
+                    Delete
+                  </button>
+                </td>
+            </tr> -->
+            </tbody>
+				
+        </table>
+<!-- end table -->
+	</div>
+
+
+<!-- Modal -->
+ <!-- this modal only apears if user submitted with empty inputs -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title d-flex gap-2 fs-5" id="exampleModalLabel">
+            <div class="modal-circle-ico rounded-circle  "></div>
+            <div class="modal-circle-ico rounded-circle  "></div>
+            <div class="modal-circle-ico rounded-circle  "></div>
+				</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <p>Site Name or Url is not valid, Please follow the rules below :</p>
+			<ul>
+				<li>Site name must contain at least 3 characters</li>
+				<li>Site URL must be a valid one</li>
+			</ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+
+
+	<!-- main javascript -->
+	<script src="js/main.js"></script>
+	<!-- bootstrap js file -->
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
